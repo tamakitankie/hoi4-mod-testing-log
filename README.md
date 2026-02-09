@@ -62,7 +62,7 @@ hoi4-mod-testing-log/
 │   └── color_test_launcher_enabled.png
 ├── 📁 logs/
 │   └── game_logs/
-├── 📁 test-mods/                  # ← Renamed from test-cases
+├── 📁 test-mods/                  
 │   ├── 📁 COLOR_TEST/
 │   │   ├── descriptor.mod
 │   │   ├── COLOR_TEST.mod

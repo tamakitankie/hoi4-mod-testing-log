@@ -22,40 +22,37 @@ HOI4 1.17.3 loads mods but ignores ALL visual overrides (colors, portraits, grap
 ## 📁 Repository Structure
 ```text
 hoi4-mod-testing-log/
-├── index.html                    # Main website
-├── README.md                     # This file
-├── docs/                         # Documentation
-│   ├── bug-report.md
+├── 📁 documentation/
+│   ├── README.md
 │   ├── test-methodology.md
-│   └── system-specs.md
-├── test-mods/                    # Test mods
-│   ├── TESTCOLOR/
-│   │   ├── TESTCOLOR.mod
-│   │   └── common/countries/colors.txt
-│   ├── TESTPORTRAIT/
-│   │   ├── TESTPORTRAIT.mod
-│   │   └── gfx/leaders/portraits.txt
-│   └── TESTVANILLA/
-│       └── vanilla_changes.txt
-├── game-logs/                    # HOI4 logs
-│   ├── error.log
-│   ├── game.log
-│   └── setup.log
-├── scripts/                      # Tools
-│   ├── clear_cache.ps1
-│   ├── create_test_mod.ps1
-│   └── verify_install.ps1
-├── screenshots/                  # Evidence
-│   ├── germany_black.png
-│   ├── vanilla_edit_fail.png
-│   └── paradox_launcher.png
-├── evidence/                     # System info
-│   ├── dxdiag.txt
-│   ├── windows_info.txt
-│   └── fresh_install_proof.txt
-└── archive/                      # Old tests
-    ├── test_2026-02-08.md
-    └── test_2026-02-09.md
+│   ├── system-specs.md
+│   └── SCRIPTS_README.md
+├── 📁 website/
+│   └── index.html
+├── 📁 tools/
+│   ├── verify_install.ps1
+│   ├── verify_install.bat
+│   ├── RUN_SCRIPTS.bat
+│   └── hoi4_nuke.py
+├── 📁 evidence/
+│   ├── screenshots/
+│   │   ├── color_override_fail.png
+│   │   ├── portrait_fail.png
+│   │   └── vanilla_edit_fail.png
+│   └── logs/
+│       ├── error.log
+│       └── game_logs/
+├── 📁 test-cases/
+│   ├── test-mods/
+│   │   └── TESTPORTRAIT/
+│   │       ├── descriptor.mod
+│   │       └── TESTPORTRAIT.mod
+│   └── test-configs/
+│       └── colors_test.txt
+└── 📁 assets/
+    ├── dxdiag.txt
+    ├── windows_info.txt
+    └── fresh_install_proof.txt
 ```
 ## 🔧 Troubleshooting Performed
 - ✅ Complete Windows 11 fresh install

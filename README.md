@@ -63,23 +63,21 @@ hoi4-mod-testing-log/
 ├── 📁 logs/
 │   └── game_logs/
 ├── 📁 test-cases/
-│   ├── 📁 test-mods/
-│   │   ├── 📁 COLOR_TEST/
-│   │   │   ├── descriptor.mod
-│   │   │   ├── COLOR_TEST.mod
-│   │   │   └── common/countries/colors.txt
-│   │   ├── 📁 PORTRAIT_NEW/
-│   │   │   ├── descriptor.mod
-│   │   │   ├── PORTRAIT_NEW.mod
-│   │   │   └── gfx/leaders/portraits.txt
-│   │   └── 📁 PORTRAIT_OLD/
-│   │       ├── descriptor.mod
-│   │       ├── PORTRAIT_OLD.mod
-│   │       ├── common/characters/ger.txt
-│   │       ├── common/characters/eng.txt
-│   │       └── gfx/leaders/portraits.txt
-│   └── 📁 test-configs/
-│       └── colors_test.txt
+│   └── 📁 test-mods/
+│       ├── 📁 COLOR_TEST/
+│       │   ├── descriptor.mod
+│       │   ├── COLOR_TEST.mod
+│       │   └── common/countries/colors.txt
+│       ├── 📁 PORTRAIT_NEW/
+│       │   ├── descriptor.mod
+│       │   ├── PORTRAIT_NEW.mod
+│       │   └── gfx/leaders/portraits.txt
+│       └── 📁 PORTRAIT_OLD/
+│           ├── descriptor.mod
+│           ├── PORTRAIT_OLD.mod
+│           ├── common/characters/ger.txt
+│           ├── common/characters/eng.txt
+│           └── gfx/leaders/portraits.txt
 └── 📁 assets/
     ├── dxdiag.txt
     ├── windows_info.txt

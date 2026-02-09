@@ -41,46 +41,46 @@
 ```text
 hoi4-mod-testing-log/
 ├── 📁 documentation/
-│ ├── SCRIPTS_README.md
-│ ├── system-specs.md
-│ └── test-methodology.md
+│   ├── SCRIPTS_README.md
+│   ├── system-specs.md
+│   └── test-methodology.md
 ├── 📁 website/
-│ └── index.html
+│   └── index.html
 ├── 📁 tools/
-│ ├── RUN_SCRIPTS.bat
-│ ├── hoi4_nuke.py
-│ ├── verify_install.bat
-│ └── verify_install.ps1
+│   ├── RUN_SCRIPTS.bat
+│   ├── hoi4_nuke.py
+│   ├── verify_install.bat
+│   └── verify_install.ps1
 ├── 📁 screenshots/
-│ ├── COLOR_MAP_OVERVIEW.jpg
-│ ├── PORTRAIT_NEW_GER.jpg
-│ ├── PORTRAIT_NEW_LAUNCHER.png
-│ ├── PORTRAIT_NEW_UK.jpg
-│ ├── PORTRAIT_OLD_GER.jpg
-│ ├── PORTRAIT_OLD_LAUNCHER.png
-│ ├── PORTRAIT_OLD_UK.jpg
-│ └── color_test_launcher_enabled.png
+│   ├── COLOR_MAP_OVERVIEW.jpg
+│   ├── PORTRAIT_NEW_GER.jpg
+│   ├── PORTRAIT_NEW_LAUNCHER.png
+│   ├── PORTRAIT_NEW_UK.jpg
+│   ├── PORTRAIT_OLD_GER.jpg
+│   ├── PORTRAIT_OLD_LAUNCHER.png
+│   ├── PORTRAIT_OLD_UK.jpg
+│   └── color_test_launcher_enabled.png
 ├── 📁 logs/
-│ └── game_logs/
-├── 📁 test-cases/
-│ ├── 📁 COLOR_TEST/
-│ │ ├── descriptor.mod
-│ │ ├── COLOR_TEST.mod
-│ │ └── common/countries/colors.txt
-│ ├── 📁 PORTRAIT_NEW/
-│ │ ├── descriptor.mod
-│ │ ├── PORTRAIT_NEW.mod
-│ │ └── gfx/leaders/portraits.txt
-│ └── 📁 PORTRAIT_OLD/
-│ ├── descriptor.mod
-│ ├── PORTRAIT_OLD.mod
-│ ├── common/characters/ger.txt
-│ ├── common/characters/eng.txt
-│ └── gfx/leaders/portraits.txt
+│   └── game_logs/
+├── 📁 test-mods/                  # ← Renamed from test-cases
+│   ├── 📁 COLOR_TEST/
+│   │   ├── descriptor.mod
+│   │   ├── COLOR_TEST.mod
+│   │   └── common/countries/colors.txt
+│   ├── 📁 PORTRAIT_NEW/
+│   │   ├── descriptor.mod
+│   │   ├── PORTRAIT_NEW.mod
+│   │   └── gfx/leaders/portraits.txt
+│   └── 📁 PORTRAIT_OLD/
+│       ├── descriptor.mod
+│       ├── PORTRAIT_OLD.mod
+│       ├── common/characters/ger.txt
+│       ├── common/characters/eng.txt
+│       └── gfx/leaders/portraits.txt
 └── 📁 assets/
-├── dxdiag.txt
-├── windows_info.txt
-└── fresh_install_proof.txt
+    ├── dxdiag.txt
+    ├── windows_info.txt
+    └── fresh_install_proof.txt
 ```
 ## 🔧 Troubleshooting Performed
 - ✅ Complete Windows 11 fresh install

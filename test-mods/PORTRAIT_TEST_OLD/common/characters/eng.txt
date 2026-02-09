@@ -1,0 +1,25 @@
+characters = {
+	# Stanley Baldwin - Prime Minister of UK (1935-1937)
+	# Available immediately in 1936 start
+	1 = {
+		name = "Stanley Baldwin"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_eng_stanley_baldwin"
+				small = "GFX_portrait_small_eng_stanley_baldwin"
+			}
+		}
+	}
+	
+	# King George VI - Monarch
+	# Always available in government screen
+	2 = {
+		name = "George VI"
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_eng_george_vi"
+				small = "GFX_portrait_small_eng_george_vi"
+			}
+		}
+	}
+}

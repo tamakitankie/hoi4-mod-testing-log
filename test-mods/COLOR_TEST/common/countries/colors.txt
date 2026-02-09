@@ -1,0 +1,14 @@
+colors = {
+	GER = {
+		color = rgb { 255 0 0 }    # Should be BRIGHT RED
+		color_ui = rgb { 255 0 0 }
+	}
+	ENG = {
+		color = rgb { 0 255 0 }    # Should be BRIGHT GREEN
+		color_ui = rgb { 0 255 0 }
+	}
+	FRA = {
+		color = rgb { 0 0 255 }    # Should be BRIGHT BLUE
+		color_ui = rgb { 0 0 255 }
+	}
+}

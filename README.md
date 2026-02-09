@@ -4,7 +4,7 @@
 
 ## 🐛 Current Status
 
-**2026-02-11:** Bug scope narrowed - **portrait/texture overrides broken** while color overrides function.
+**2026-02-11:** Bug scope narrowed - **portrait/texture overrides broken** while colour overrides function.
 
 ### Test Results Summary:
 - ✅ **Color Overrides**: Working (Germany→Red, UK→Green confirmed)

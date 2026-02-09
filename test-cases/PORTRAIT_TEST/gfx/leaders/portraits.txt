@@ -1,0 +1,15 @@
+spriteTypes = {
+	# Override vanilla sprite names (1.17.3 system)
+	spriteType = {
+		name = "GFX_portrait_eng_stanley_baldwin"  # Vanilla sprite name
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ger_adolf_hitler"  # Vanilla sprite name
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ger_hermann_goering"  # Vanilla sprite name
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+}

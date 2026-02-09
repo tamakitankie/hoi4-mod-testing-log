@@ -1,0 +1,45 @@
+spriteTypes = {
+	# UK Leaders
+	spriteType = {
+		name = "GFX_portrait_eng_stanley_baldwin"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_small_eng_stanley_baldwin"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_eng_george_vi"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_small_eng_george_vi"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	
+	# German Leaders
+	spriteType = {
+		name = "GFX_portrait_ger_adolf_hitler"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_small_ger_adolf_hitler"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ger_adolf_hitler_army"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_small_ger_adolf_hitler_army"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_ger_hermann_goering"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_small_ger_hermann_goering"
+		texturefile = "gfx/leaders/test_portrait.dds"
+	}
+}

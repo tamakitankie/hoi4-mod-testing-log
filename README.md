@@ -2,19 +2,34 @@
 
 **Tracking HOI4 1.17.3 Graphics Override Engine Bugs**
 
-## 🐛🔄 Current Status Update
-**2026-02-10:** Initial testing reveals color overrides FUNCTION correctly.
-- ✅ Country color overrides work
-- 🔄 Portrait overrides testing in progress
-- 🔄 Bug scope narrowed to potentially portrait/texture systems only
+## 🐛 Current Status
 
+**2026-02-11:** Bug scope narrowed - **portrait/texture overrides broken** while color overrides function.
+
+### Test Results Summary:
+- ✅ **Color Overrides**: Working (Germany→Red, UK→Green confirmed)
+- ❌ **Portrait Overrides (New System)**: Broken (1.17.3 `gfx/leaders/` system)
+- ❌ **Portrait Overrides (Old System)**: Broken (`common/characters/` system)
+
+### Implications:
+- Graphics pipeline is **partially functional**
+- Bug specific to **texture/sprite rendering subsystem**
+- Affects **both old and new portrait systems** in 1.17.3
+  
 ## 📊 Test Results
 
 | Test Date | Test Type | Expected Result | Actual Result | Status |
 |-----------|-----------|-----------------|---------------|--------|
 | 2026-02-09 | Color Override | Germany = Red | Germany = Black | ❌ FAIL |
 | 2026-02-09 | Vanilla File Edit | Germany = Red | Germany = Black | ❌ FAIL |
-| 2026-02-09 | Portrait Override | H1tl3r → Churchill | No Change | ❌ FAIL |
+| 2026-02-09 | Portrait Override | Portrait Change | No Change | ❌ FAIL |
+| 2026-02-10 | System Fresh Install | Clean Windows 11 | Fresh HOI4 1.17.3 | ✅ PASS |
+| 2026-02-10 | Dependencies Check | All dependencies | All installed | ✅ PASS |
+| 2026-02-10 | File Encoding | UTF-8 without BOM | Correct encoding | ✅ PASS |
+| 2026-02-10 | **Color Override** | Germany = Red | **Germany = Red** | ✅ **PASS** |
+| 2026-02-10 | **Portrait (New System)** | Custom DDS portrait | Vanilla portrait | ❌ FAIL |
+| 2026-02-10 | **Portrait (Old System)** | Custom DDS portrait | Vanilla portrait | ❌ FAIL |
+
 
 ## 🔧 System Information
 - **OS:** Windows 11 Pro (fresh install)

@@ -1,61 +1,80 @@
-# HOI4 1.17.3 Graphics Override Bug Documentation
+# HOI4 Mod Testing Log
 
-**Critical engine bug in Hearts of Iron IV 1.17.3**
+**Tracking HOI4 1.17.3 Graphics Override Engine Bugs**
 
-## [!] Core Issue
-HOI4 1.17.3 loads mods but IGNORES visual overrides.
+## 🐛 Current Issue
+HOI4 1.17.3 loads mods but ignores ALL visual overrides (colors, portraits, graphics).
 
-- [OK] Reads and parses mod files correctly
-- [OK] Shows mods as enabled in launcher
-- [FAIL] Does NOT apply visual changes (colors, portraits)
-- [FAIL] Even direct edits to vanilla files are ignored
+## 📊 Test Results
 
-## [i] System Information
-- OS: Windows 11 Pro (fresh install)
-- HOI4 Version: 1.17.3
-- Game Build: Steam version
-- Testing Date: 2026-02-09
+| Test Date | Test Type | Expected Result | Actual Result | Status |
+|-----------|-----------|-----------------|---------------|--------|
+| 2026-02-09 | Color Override | Germany = Red | Germany = Black | ❌ FAIL |
+| 2026-02-09 | Vanilla File Edit | Germany = Red | Germany = Black | ❌ FAIL |
+| 2026-02-09 | Portrait Override | Hitler → Churchill | No Change | ❌ FAIL |
 
-## Test Results
-| Test Type | Expected | Actual | Status |
-|-----------|----------|--------|--------|
-| Color Override | Red Germany | Black Germany | [FAIL] |
-| Portrait Override | Changed | No Change | [FAIL] |
-| Vanilla Edit | Should work | Ignored | [FAIL] |
-| Mod Loading | Syntax errors | Errors appear | [OK] |
+## 🔧 System Information
+- **OS:** Windows 11 Pro (fresh install)
+- **HOI4 Version:** 1.17.3
+- **Issue:** Graphics override pipeline broken
+- **Evidence:** [Link to Paradox Forum Post](#)
 
-## Repository Structure
+## 📁 Repository Structure
 hoi4-mod-testing-log/
-|-- README.md
-|-- index.html
-|-- test-methodology.md
-|-- system-specs.md
-|-- clear_cache.ps1
-|-- verify_install.ps1
-|-- error.log
-|-- screenshots/
-| |-- color_override_fail.png
-| +-- portrait_fail.png
-+-- test-mods/
-+-- TESTPORTRAIT/
-|-- descriptor.mod
-+-- TESTPORTRAIT.mod
+├── index.html                    # Main website
+├── README.md                     # This file
+├── docs/                         # Documentation
+│   ├── bug-report.md
+│   ├── test-methodology.md
+│   └── system-specs.md
+├── test-mods/                    # Test mods
+│   ├── TESTCOLOR/
+│   │   ├── TESTCOLOR.mod
+│   │   └── common/countries/colors.txt
+│   ├── TESTPORTRAIT/
+│   │   ├── TESTPORTRAIT.mod
+│   │   └── gfx/leaders/portraits.txt
+│   └── TESTVANILLA/
+│       └── vanilla_changes.txt
+├── game-logs/                    # HOI4 logs
+│   ├── error.log
+│   ├── game.log
+│   └── setup.log
+├── scripts/                      # Tools
+│   ├── clear_cache.ps1
+│   ├── create_test_mod.ps1
+│   └── verify_install.ps1
+├── screenshots/                  # Evidence
+│   ├── germany_black.png
+│   ├── vanilla_edit_fail.png
+│   └── paradox_launcher.png
+├── evidence/                     # System info
+│   ├── dxdiag.txt
+│   ├── windows_info.txt
+│   └── fresh_install_proof.txt
+└── archive/                      # Old tests
+    ├── test_2026-02-08.md
+    └── test_2026-02-09.md
 
+## 🔧 Troubleshooting Performed
+- ✅ Complete Windows 11 fresh install
+- ✅ HOI4 fresh Steam install  
+- ✅ All dependencies installed
+- ✅ File permissions fixed
+- ✅ Cache cleared (nuclear options)
+- ✅ Both portrait systems tested
+- ✅ Correct file encoding verified
 
-## [TOOL] Troubleshooting Performed
-- [OK] Complete Windows 11 fresh install
-- [OK] HOI4 fresh Steam install
-- [OK] File permissions fixed
-- [OK] Cache cleared multiple ways
-- [OK] Both portrait systems tested
+## 🎯 Conclusion
+This is a **CONFIRMED engine-level bug** in HOI4 1.17.3.  
+Game reads mods but fails to apply visual overrides.
 
-## Conclusion
-This is a CONFIRMED engine-level bug in HOI4 1.17.3.
-
-## Links
-- Paradox Bug Report: [forum link]
+## 🔗 Links
+- Paradox Bug Report: [forum link](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)
 - Game Logs: Documents/Paradox Interactive/Hearts of Iron IV/logs/
+- Testing Dashboard: [GitHub Pages](https://github.com/tamakitankie)
+- Full Evidence: [GitHub Repository](https://github.com/tamakitankie/hoi4-mod-testing-log)
 
 ---
 Last Updated: 2026-02-10
-Bug affects all HOI4 modding in version 1.17.3
+Bug affects ALL visual modding in HOI4 1.17.3

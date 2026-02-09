@@ -2,8 +2,11 @@
 
 **Tracking HOI4 1.17.3 Graphics Override Engine Bugs**
 
-## 🐛 Current Issue
-HOI4 1.17.3 loads mods but ignores ALL visual overrides (colors, portraits, graphics).
+## 🐛🔄 Current Status Update
+**2026-02-10:** Initial testing reveals color overrides FUNCTION correctly.
+- ✅ Country color overrides work
+- 🔄 Portrait overrides testing in progress
+- 🔄 Bug scope narrowed to potentially portrait/texture systems only
 
 ## 📊 Test Results
 

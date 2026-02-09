@@ -38,7 +38,7 @@ hoi4-mod-testing-log/
 │ ├── RUN_SCRIPTS.bat
 │ └── hoi4_nuke.py
 ├── 📁 evidence/
-│ ├── screenshots/
+│ ├── 📁 screenshots/
 │ │ ├── COLOR_LAUNCHER.png
 │ │ ├── COLOR_GERMANY_RED.png
 │ │ ├── COLOR_UK_GREEN.png
@@ -48,30 +48,31 @@ hoi4-mod-testing-log/
 │ │ ├── PORTRAIT_OLD_LAUNCHER.png
 │ │ ├── PORTRAIT_OLD_GERMANY_FAIL.png
 │ │ └── PORTRAIT_OLD_UK_FAIL.png
-│ └── logs/
+│ └── 📁 logs/
 │ ├── error.log
 │ └── game_logs/
 ├── 📁 test-cases/
-│ ├── test-mods/
-│ │ ├── COLOR_TEST/
+│ ├── 📁 test-mods/
+│ │ ├── 📁 COLOR_TEST/
 │ │ │ ├── descriptor.mod
 │ │ │ ├── COLOR_TEST.mod
 │ │ │ └── common/countries/colors.txt
-│ │ ├── PORTRAIT_NEW/
+│ │ ├── 📁 PORTRAIT_NEW/
 │ │ │ ├── descriptor.mod
 │ │ │ ├── PORTRAIT_NEW.mod
 │ │ │ └── gfx/leaders/portraits.txt
-│ │ └── PORTRAIT_OLD/
+│ │ └── 📁 PORTRAIT_OLD/
 │ │ ├── descriptor.mod
 │ │ ├── PORTRAIT_OLD.mod
 │ │ ├── common/characters/ger.txt
 │ │ ├── common/characters/eng.txt
 │ │ └── gfx/leaders/portraits.txt
-│ └── test-configs/
+│ └── 📁 test-configs/
 │ └── colors_test.txt
 └── 📁 assets/
 ├── dxdiag.txt
 ├── windows_info.txt
+└── fresh_install_proof.txt
 ```
 ## 🔧 Troubleshooting Performed
 - ✅ Complete Windows 11 fresh install

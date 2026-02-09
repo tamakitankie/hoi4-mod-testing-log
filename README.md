@@ -26,36 +26,52 @@
 ```text
 hoi4-mod-testing-log/
 ├── 📁 documentation/
-│   ├── README.md
-│   ├── test-methodology.md
-│   ├── system-specs.md
-│   └── SCRIPTS_README.md
+│ ├── README.md
+│ ├── test-methodology.md
+│ ├── system-specs.md
+│ └── SCRIPTS_README.md
 ├── 📁 website/
-│   └── index.html
+│ └── index.html
 ├── 📁 tools/
-│   ├── verify_install.ps1
-│   ├── verify_install.bat
-│   ├── RUN_SCRIPTS.bat
-│   └── hoi4_nuke.py
+│ ├── verify_install.ps1
+│ ├── verify_install.bat
+│ ├── RUN_SCRIPTS.bat
+│ └── hoi4_nuke.py
 ├── 📁 evidence/
-│   ├── screenshots/
-│   │   ├── color_override_fail.png
-│   │   ├── portrait_fail.png
-│   │   └── vanilla_edit_fail.png
-│   └── logs/
-│       ├── error.log
-│       └── game_logs/
+│ ├── screenshots/
+│ │ ├── COLOR_LAUNCHER.png
+│ │ ├── COLOR_GERMANY_RED.png
+│ │ ├── COLOR_UK_GREEN.png
+│ │ ├── PORTRAIT_NEW_LAUNCHER.png
+│ │ ├── PORTRAIT_NEW_GERMANY_FAIL.png
+│ │ ├── PORTRAIT_NEW_UK_FAIL.png
+│ │ ├── PORTRAIT_OLD_LAUNCHER.png
+│ │ ├── PORTRAIT_OLD_GERMANY_FAIL.png
+│ │ └── PORTRAIT_OLD_UK_FAIL.png
+│ └── logs/
+│ ├── error.log
+│ └── game_logs/
 ├── 📁 test-cases/
-│   ├── test-mods/
-│   │   └── TESTPORTRAIT/
-│   │       ├── descriptor.mod
-│   │       └── TESTPORTRAIT.mod
-│   └── test-configs/
-│       └── colors_test.txt
+│ ├── test-mods/
+│ │ ├── COLOR_TEST/
+│ │ │ ├── descriptor.mod
+│ │ │ ├── COLOR_TEST.mod
+│ │ │ └── common/countries/colors.txt
+│ │ ├── PORTRAIT_NEW/
+│ │ │ ├── descriptor.mod
+│ │ │ ├── PORTRAIT_NEW.mod
+│ │ │ └── gfx/leaders/portraits.txt
+│ │ └── PORTRAIT_OLD/
+│ │ ├── descriptor.mod
+│ │ ├── PORTRAIT_OLD.mod
+│ │ ├── common/characters/ger.txt
+│ │ ├── common/characters/eng.txt
+│ │ └── gfx/leaders/portraits.txt
+│ └── test-configs/
+│ └── colors_test.txt
 └── 📁 assets/
-    ├── dxdiag.txt
-    ├── windows_info.txt
-    └── fresh_install_proof.txt
+├── dxdiag.txt
+├── windows_info.txt
 ```
 ## 🔧 Troubleshooting Performed
 - ✅ Complete Windows 11 fresh install

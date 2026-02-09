@@ -71,9 +71,9 @@ This is a **CONFIRMED engine-level bug** in HOI4 1.17.3.
 Game reads mods but fails to apply visual overrides.
 
 ## 🔗 Links
-- Paradox Bug Report: [forum link](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)
+- Paradox Bug Report: [Forum link](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)
 - Game Logs: Documents/Paradox Interactive/Hearts of Iron IV/logs/
-- Testing Dashboard: [GitHub Pages](https://github.com/tamakitankie)
+- Testing Dashboard: [Setup in Progress - View `index.html`]
 - Full Evidence: [GitHub Repository](https://github.com/tamakitankie/hoi4-mod-testing-log)
 
 ---

@@ -20,6 +20,7 @@ HOI4 1.17.3 loads mods but ignores ALL visual overrides (colors, portraits, grap
 - **Evidence:** [Link to Paradox Forum Post](#)
 
 ## 📁 Repository Structure
+```text
 hoi4-mod-testing-log/
 ├── index.html                    # Main website
 ├── README.md                     # This file
@@ -55,7 +56,7 @@ hoi4-mod-testing-log/
 └── archive/                      # Old tests
     ├── test_2026-02-08.md
     └── test_2026-02-09.md
-
+```
 ## 🔧 Troubleshooting Performed
 - ✅ Complete Windows 11 fresh install
 - ✅ HOI4 fresh Steam install  

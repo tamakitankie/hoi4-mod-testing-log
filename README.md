@@ -2,12 +2,12 @@
 
 **Critical engine bug in Hearts of Iron IV 1.17.3** - Visual overrides (colors, portraits) fail to apply despite mods loading correctly.
 
-## 🚨 Core Issue
+## ⚠️ Core Issue ⚠️ ## 
 HOI4 1.17.3 loads mods but **completely ignores visual overrides**. The game:
-- ✅ Reads and parses mod files correctly
-- ✅ Shows mods as enabled in launcher
-- ❌ **Fails to apply any visual changes** (colors, portraits, graphics)
-- ❌ Even direct edits to vanilla files are ignored
+- ✓ Reads and parses mod files correctly
+- ✓ Shows mods as enabled in launcher
+- ✗ **Fails to apply any visual changes** (colors, portraits, graphics)
+- ✗ Even direct edits to vanilla files are ignored
 
 ## 📋 System Information
 - **OS**: Windows 11 Pro (fresh install)
@@ -18,45 +18,26 @@ HOI4 1.17.3 loads mods but **completely ignores visual overrides**. The game:
 ## 🔍 Comprehensive Testing Performed
 
 ### System-Level Troubleshooting
-- ✅ Complete Windows 11 fresh wipe & reinstall
-- ✅ Fresh HOI4 install from Steam
-- ✅ All dependencies reinstalled (DirectX, VC++, .NET)
-- ✅ File permissions fixed (full control to Paradox folders)
-- ✅ Windows Defender exclusions added
+- ✓ Complete Windows 11 fresh wipe & reinstall
+- ✓ Fresh HOI4 install from Steam
+- ✓ All dependencies reinstalled (DirectX, VC++, .NET)
+- ✓ File permissions fixed (full control to Paradox folders)
+- ✓ Windows Defender exclusions added
 
 ### Modding-Specific Testing
-- ✅ Correct file encoding (UTF-8 without BOM, Unix LF)
-- ✅ Both old (common/leaders/) and new portrait systems tested
-- ✅ Verified 1.17.3 portrait system structure (gfx/leaders/portraits.txt)
-- ✅ Nuclear cache clearing (custom scripts)
-- ✅ Mod loading verification (confirmed via syntax errors)
+- ✓ Correct file encoding (UTF-8 without BOM, Unix LF)
+- ✓ Both old (common/leaders/) and new portrait systems tested
+- ✓ Verified 1.17.3 portrait system structure (gfx/leaders/portraits.txt)
+- ✓ Nuclear cache clearing (custom scripts)
+- ✓ Mod loading verification (confirmed via syntax errors)
 
 ### Test Results
 | Test Type | Expected Result | Actual Result | Status |
 |-----------|-----------------|---------------|--------|
-| Color Override | Germany → Red | Germany → Black | ❌ FAIL |
-| Portrait Override | Hitler → Churchill | No change | ❌ FAIL |
-| Vanilla File Edit | Direct change applied | Change ignored | ❌ FAIL |
-| Mod Loading | Syntax errors shown | Errors appear | ✅ PASS |
-
-## 📁 Repository Structure
-hoi4-mod-testing-log/
-├── README.md
-├── index.html
-├── test-methodology.md
-├── system-specs.md
-├── clear_cache.ps1
-├── verify_install.ps1
-├── error.log
-├── screenshots/
-│ ├── color_override_fail.png
-│ └── portrait_fail.png
-└── test-mods/
-└── TESTPORTRAIT/
-├── descriptor.mod
-└── TESTPORTRAIT.mod
-
-text
+| Color Override | Germany → Red | Germany → Black | ✗ FAIL |
+| Portrait Override | Hitler → Churchill | No change | ✗ FAIL |
+| Vanilla File Edit | Direct change applied | Change ignored | ✗ FAIL |
+| Mod Loading | Syntax errors shown | Errors appear | ✓ PASS |
 
 ## 🛠️ Tools & Scripts Created
 - **Cache clearing scripts** (Python/PowerShell)

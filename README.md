@@ -95,8 +95,26 @@ hoi4-mod-testing-log/
 - ✅ Correct file encoding verified
 
 ## 🎯 Conclusion
-This is a **CONFIRMED engine-level bug** in HOI4 1.17.3.  
-Game reads mods but fails to apply visual overrides.
+
+**This is a confirmed texture/portrait rendering engine bug in HOI4 1.17.3.**
+
+### What Works:
+- ✅ Mod loading and parsing
+- ✅ Colour override system (`common/countries/colors.txt`)
+
+### What's Broken:
+- ❌ New 1.17.3 portrait system (`gfx/leaders/portraits.txt`)
+- ❌ Old portrait system (`common/characters/`)
+- ❌ Texture/sprite rendering pipeline
+
+### Bug Scope Refinement:
+| System | Status | Implication |
+|--------|--------|-------------|
+| **Color Overrides** | ✅ Functional | Graphics pipeline partially works |
+| **Portrait Overrides** | ❌ Completely Broken | Texture rendering subsystem broken |
+| **File Reading** | ✅ Functional | Game reads mods correctly |
+
+This bug affects **all portrait and texture overrides** while sparing color overrides, indicating a specific failure in HOI4 1.17.3's texture rendering engine.
 
 ## 🔗 Links
 - Paradox Bug Report: [Forum link](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)

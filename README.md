@@ -11,7 +11,7 @@ HOI4 1.17.3 loads mods but ignores ALL visual overrides (colors, portraits, grap
 |-----------|-----------|-----------------|---------------|--------|
 | 2026-02-09 | Color Override | Germany = Red | Germany = Black | ❌ FAIL |
 | 2026-02-09 | Vanilla File Edit | Germany = Red | Germany = Black | ❌ FAIL |
-| 2026-02-09 | Portrait Override | Hitler → Churchill | No Change | ❌ FAIL |
+| 2026-02-09 | Portrait Override | H1tl3r → Churchill | No Change | ❌ FAIL |
 
 ## 🔧 System Information
 - **OS:** Windows 11 Pro (fresh install)

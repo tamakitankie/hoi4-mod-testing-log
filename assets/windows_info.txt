@@ -1,0 +1,72 @@
+
+Host Name:                     ******
+OS Name:                       Microsoft Windows 11 Pro
+OS Version:                    10.0.26200 N/A Build 26200
+OS Manufacturer:               Microsoft Corporation
+OS Configuration:              Standalone Workstation
+OS Build Type:                 Multiprocessor Free
+Registered Owner:              *********@****.***
+Registered Organization:       N/A
+Product ID:                    ****-*****-*****-*****
+Original Install Date:         9/02/2026, 7:10:52 pm
+System Boot Time:              10/02/2026, 10:03:28 am
+System Manufacturer:           Intel(R) Client Systems
+System Model:                  NUC9i9QNB
+System Type:                   x64-based PC
+Processor(s):                  1 Processor(s) Installed.
+                               [01]: Intel64 Family 6 Model 158 Stepping 13 GenuineIntel ~2400 Mhz
+BIOS Version:                  Intel Corp. QXCFL579.0073.2023.0816.1824, 16/08/2023
+Windows Directory:             C:\WINDOWS
+System Directory:              C:\WINDOWS\system32
+Boot Device:                   \Device\HarddiskVolume1
+System Locale:                 en-gb;English (United Kingdom)
+Input Locale:                  en-nz;English (New Zealand)
+Time Zone:                     (UTC+12:00) Auckland, Wellington
+Total Physical Memory:         16,250 MB
+Available Physical Memory:     9,379 MB
+Virtual Memory: Max Size:      19,194 MB
+Virtual Memory: Available:     10,714 MB
+Virtual Memory: In Use:        8,480 MB
+Page File Location(s):         C:\pagefile.sys
+Domain:                        WORKGROUP
+Logon Server:                  \\****
+Hotfix(s):                     6 Hotfix(s) Installed.
+                               [01]: KB5066128
+                               [02]: KB5050575
+                               [03]: KB5054156
+                               [04]: KB5071430
+                               [05]: KB5074109
+                               [06]: KB5071142
+Network Card(s):               3 NIC(s) Installed.
+                               [01]: Intel(R) Ethernet Connection (7) I219-LM
+                                     Connection Name: Ethernet
+                                     DHCP Enabled:    Yes
+                                     DHCP Server:     10.0.0.1
+                                     IP address(es)
+                                     [01]: 10.0.0.7
+                                     [02]: fe80::232f:d342:533f:7c76
+                               [02]: Intel(R) I210 Gigabit Network Connection
+                                     Connection Name: Ethernet 2
+                                     Status:          Media disconnected
+                               [03]: Intel(R) Wi-Fi 6 AX200 160MHz
+                                     Connection Name: WiFi
+                                     Status:          Media disconnected
+Virtualization-based security: Status: Running
+                               Required Security Properties:
+                                     Base Virtualization Support
+                               Available Security Properties:
+                                     Base Virtualization Support
+                                     Secure Boot
+                                     DMA Protection
+                                     Secure Memory Overwrite
+                                     UEFI Code Readonly
+                                     SMM Security Mitigations 1.0
+                                     Mode Based Execution Control
+                               Services Configured:
+                                     Hypervisor enforced Code Integrity
+                               Services Running:
+                                     Hypervisor enforced Code Integrity
+                               App Control for Business policy: Enforced
+                               App Control for Business user mode policy: Audit
+                               Security Features Enabled:
+Hyper-V Requirements:          A hypervisor has been detected. Features required for Hyper-V will not be displayed.

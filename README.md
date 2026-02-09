@@ -17,7 +17,7 @@ HOI4 1.17.3 loads mods but ignores ALL visual overrides (colors, portraits, grap
 - **OS:** Windows 11 Pro (fresh install)
 - **HOI4 Version:** 1.17.3
 - **Issue:** Graphics override pipeline broken
-- **Evidence:** [Link to Paradox Forum Post](#)
+- **Evidence:** [Link to Paradox Forum Post](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)
 
 ## 📁 Repository Structure
 ```text

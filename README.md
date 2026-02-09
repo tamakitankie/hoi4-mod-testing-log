@@ -26,53 +26,49 @@
 ```text
 hoi4-mod-testing-log/
 ├── 📁 documentation/
-│ ├── README.md
-│ ├── test-methodology.md
-│ ├── system-specs.md
-│ └── SCRIPTS_README.md
+│   ├── SCRIPTS_README.md
+│   ├── system-specs.md
+│   └── test-methodology.md
 ├── 📁 website/
-│ └── index.html
+│   └── index.html
 ├── 📁 tools/
-│ ├── verify_install.ps1
-│ ├── verify_install.bat
-│ ├── RUN_SCRIPTS.bat
-│ └── hoi4_nuke.py
-├── 📁 evidence/
-│ ├── 📁 screenshots/
-│ │ ├── COLOR_LAUNCHER.png
-│ │ ├── COLOR_GERMANY_RED.png
-│ │ ├── COLOR_UK_GREEN.png
-│ │ ├── PORTRAIT_NEW_LAUNCHER.png
-│ │ ├── PORTRAIT_NEW_GERMANY_FAIL.png
-│ │ ├── PORTRAIT_NEW_UK_FAIL.png
-│ │ ├── PORTRAIT_OLD_LAUNCHER.png
-│ │ ├── PORTRAIT_OLD_GERMANY_FAIL.png
-│ │ └── PORTRAIT_OLD_UK_FAIL.png
-│ └── 📁 logs/
-│ ├── error.log
-│ └── game_logs/
+│   ├── RUN_SCRIPTS.bat
+│   ├── hoi4_nuke.py
+│   ├── verify_install.bat
+│   └── verify_install.ps1
+├── 📁 screenshots/
+│   ├── COLOR_MAP_OVERVIEW.jpg
+│   ├── PORTRAIT_NEW_GER.jpg
+│   ├── PORTRAIT_NEW_LAUNCHER.png
+│   ├── PORTRAIT_NEW_UK.jpg
+│   ├── PORTRAIT_OLD_GER.jpg
+│   ├── PORTRAIT_OLD_LAUNCHER.png
+│   ├── PORTRAIT_OLD_UK.jpg
+│   └── color_test_launcher_enabled.png
+├── 📁 logs/
+│   └── game_logs/
 ├── 📁 test-cases/
-│ ├── 📁 test-mods/
-│ │ ├── 📁 COLOR_TEST/
-│ │ │ ├── descriptor.mod
-│ │ │ ├── COLOR_TEST.mod
-│ │ │ └── common/countries/colors.txt
-│ │ ├── 📁 PORTRAIT_NEW/
-│ │ │ ├── descriptor.mod
-│ │ │ ├── PORTRAIT_NEW.mod
-│ │ │ └── gfx/leaders/portraits.txt
-│ │ └── 📁 PORTRAIT_OLD/
-│ │ ├── descriptor.mod
-│ │ ├── PORTRAIT_OLD.mod
-│ │ ├── common/characters/ger.txt
-│ │ ├── common/characters/eng.txt
-│ │ └── gfx/leaders/portraits.txt
-│ └── 📁 test-configs/
-│ └── colors_test.txt
+│   ├── 📁 test-mods/
+│   │   ├── 📁 COLOR_TEST/
+│   │   │   ├── descriptor.mod
+│   │   │   ├── COLOR_TEST.mod
+│   │   │   └── common/countries/colors.txt
+│   │   ├── 📁 PORTRAIT_NEW/
+│   │   │   ├── descriptor.mod
+│   │   │   ├── PORTRAIT_NEW.mod
+│   │   │   └── gfx/leaders/portraits.txt
+│   │   └── 📁 PORTRAIT_OLD/
+│   │       ├── descriptor.mod
+│   │       ├── PORTRAIT_OLD.mod
+│   │       ├── common/characters/ger.txt
+│   │       ├── common/characters/eng.txt
+│   │       └── gfx/leaders/portraits.txt
+│   └── 📁 test-configs/
+│       └── colors_test.txt
 └── 📁 assets/
-├── dxdiag.txt
-├── windows_info.txt
-└── fresh_install_proof.txt
+    ├── dxdiag.txt
+    ├── windows_info.txt
+    └── fresh_install_proof.txt
 ```
 ## 🔧 Troubleshooting Performed
 - ✅ Complete Windows 11 fresh install

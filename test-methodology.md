@@ -39,10 +39,26 @@ This bug report follows scientific testing principles: reproducible, systematic,
 5. **Reset:** Clear caches, repeat for next test
 
 ## Tools Used
-- Custom PowerShell scripts for cache clearing
-- Notepad++ for file encoding verification
-- GitHub for version control and documentation
-- Windows Event Viewer for system logs
+
+### Automation & Scripting
+- **`hoi4_nuke.ps1`** - Custom PowerShell script for comprehensive HOI4 cache and registry cleanup
+- **`verify_install.ps1`** - System dependency and installation verification tool
+- **PowerShell 7.0+** - All automation and system management tasks
+
+### File & Code Management
+- **Notepad++** - File editing with encoding detection (UTF-8 without BOM, Unix LF)
+- **GitHub** - Version control, documentation, and public bug reporting
+- **GitHub Pages** - Live testing dashboard hosting
+
+### System Diagnostics
+- **Windows Event Viewer** - System and application log analysis
+- **Windows Defender** - Security and exclusion management
+- **DirectX Diagnostic Tool** - Graphics system verification
+
+### Testing & Evidence
+- **Windows Snipping Tool** - Screenshot capture for visual evidence
+- **Steam Client** - Game file verification and management
+- **Paradox Launcher** - Mod loading and management interface
 
 ## Quality Assurance
 - Each test repeated minimum 3 times

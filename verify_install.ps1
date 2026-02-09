@@ -1,5 +1,21 @@
 # HOI4 Installation Verification Script
 
+# Store original title to restore later
+$originalTitle = $Host.UI.RawUI.WindowTitle
+$Host.UI.RawUI.WindowTitle = "HOI4 Installation Verification"
+
+# Function to wait for user input
+function Wait-ForUser {
+    if ($Host.Name -eq 'ConsoleHost') {
+        Write-Host "`nPress any key to continue..." -ForegroundColor Gray
+        $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
+    } else {
+        # For PowerShell ISE or double-click execution
+        Write-Host "`nScript completed. This window will close in 30 seconds..." -ForegroundColor Yellow
+        Start-Sleep -Seconds 30
+    }
+}
+
 Write-Host "=== HOI4 Installation Verification ===" -ForegroundColor Cyan
 Write-Host "Verifies all dependencies and game files" -ForegroundColor Gray
 Write-Host "`n"
@@ -12,16 +28,16 @@ if (Test-Path $hoi4Path) {
     if (Test-Path $versionFile) {
         try {
             $versionInfo = Get-Content $versionFile | ConvertFrom-Json
-            Write-Host "  ✓ HOI4 installed at: $hoi4Path" -ForegroundColor Green
+            Write-Host "  [OK] HOI4 installed at: $hoi4Path" -ForegroundColor Green
             Write-Host "  Version: $($versionInfo.rawVersion)" -ForegroundColor Gray
         } catch {
-            Write-Host "  ⚠ Version file exists but cannot be parsed" -ForegroundColor Yellow
+            Write-Host "  [WARN] Version file exists but cannot be parsed" -ForegroundColor Yellow
         }
     } else {
-        Write-Host "  ⚠ HOI4 found but version info missing" -ForegroundColor Yellow
+        Write-Host "  [WARN] HOI4 found but version info missing" -ForegroundColor Yellow
     }
 } else {
-    Write-Host "  ✗ HOI4 not found in default location" -ForegroundColor Red
+    Write-Host "  [FAIL] HOI4 not found in default location" -ForegroundColor Red
 }
 
 # Check 2: Dependencies
@@ -60,21 +76,21 @@ function Test-DotNet {
 
 # Run dependency checks
 if (Test-DirectX) {
-    Write-Host "  ✓ DirectX" -ForegroundColor Green
+    Write-Host "  [OK] DirectX" -ForegroundColor Green
 } else {
-    Write-Host "  ✗ DirectX (missing or outdated)" -ForegroundColor Red
+    Write-Host "  [FAIL] DirectX (missing or outdated)" -ForegroundColor Red
 }
 
 if (Test-VCRedist) {
-    Write-Host "  ✓ Visual C++ 2015-2022" -ForegroundColor Green
+    Write-Host "  [OK] Visual C++ 2015-2022" -ForegroundColor Green
 } else {
-    Write-Host "  ✗ Visual C++ 2015-2022 (missing)" -ForegroundColor Red
+    Write-Host "  [FAIL] Visual C++ 2015-2022 (missing)" -ForegroundColor Red
 }
 
 if (Test-DotNet) {
-    Write-Host "  ✓ .NET Framework 4.8+" -ForegroundColor Green
+    Write-Host "  [OK] .NET Framework 4.8+" -ForegroundColor Green
 } else {
-    Write-Host "  ✗ .NET Framework 4.8+ (missing)" -ForegroundColor Red
+    Write-Host "  [FAIL] .NET Framework 4.8+ (missing)" -ForegroundColor Red
 }
 
 # Check 3: File Permissions
@@ -85,15 +101,15 @@ if (Test-Path $parDocsPath) {
         $acl = Get-Acl $parDocsPath -ErrorAction Stop
         $access = $acl.Access | Where-Object { $_.IdentityReference -like "*$env:USERNAME*" }
         if ($access.FileSystemRights -match "FullControl") {
-            Write-Host "  ✓ Full permissions on Paradox folders" -ForegroundColor Green
+            Write-Host "  [OK] Full permissions on Paradox folders" -ForegroundColor Green
         } else {
-            Write-Host "  ⚠ Limited permissions detected" -ForegroundColor Yellow
+            Write-Host "  [WARN] Limited permissions detected" -ForegroundColor Yellow
         }
     } catch {
-        Write-Host "  ⚠ Cannot check permissions: $_" -ForegroundColor Yellow
+        Write-Host "  [WARN] Cannot check permissions: $_" -ForegroundColor Yellow
     }
 } else {
-    Write-Host "  ℹ Paradox folder not found, will be created on first run" -ForegroundColor Gray
+    Write-Host "  [INFO] Paradox folder not found, will be created on first run" -ForegroundColor Gray
 }
 
 # Check 4: Windows Defender Exclusions
@@ -124,9 +140,9 @@ foreach ($defenderPath in $defenderPaths) {
 }
 
 if ($exclusionFound) {
-    Write-Host "  ✓ HOI4 paths excluded from Defender" -ForegroundColor Green
+    Write-Host "  [OK] HOI4 paths excluded from Defender" -ForegroundColor Green
 } else {
-    Write-Host "  ℹ No Defender exclusions found for HOI4 (recommended but not required)" -ForegroundColor Gray
+    Write-Host "  [INFO] No Defender exclusions found for HOI4 (recommended but not required)" -ForegroundColor Gray
 }
 
 # Check 5: Game Files Integrity
@@ -143,13 +159,14 @@ if (Test-Path $hoi4Path) {
         $fullPath = Join-Path $hoi4Path $file
         if (Test-Path $fullPath) {
             $size = (Get-Item $fullPath).Length / 1MB
-            Write-Host "  ✓ $file ($([math]::Round($size,2)) MB)" -ForegroundColor Green
+            $sizeRounded = [math]::Round($size, 2)
+            Write-Host "  [OK] $file (${sizeRounded} MB)" -ForegroundColor Green
         } else {
-            Write-Host "  ✗ $file (missing)" -ForegroundColor Red
+            Write-Host "  [FAIL] $file (missing)" -ForegroundColor Red
         }
     }
 } else {
-    Write-Host "  ✗ Cannot check files - HOI4 path not found" -ForegroundColor Red
+    Write-Host "  [FAIL] Cannot check files - HOI4 path not found" -ForegroundColor Red
 }
 
 Write-Host "`n=== Verification Complete ===" -ForegroundColor Cyan
@@ -159,13 +176,8 @@ Write-Host "- Reinstall dependencies if marked as missing" -ForegroundColor Gray
 Write-Host "- Check Windows Event Viewer for detailed errors" -ForegroundColor Gray
 Write-Host "- Note: Windows Defender exclusions are optional but recommended" -ForegroundColor Gray
 
-Write-Host "`nPress any key to continue..." -ForegroundColor Gray
+# Restore original window title
+$Host.UI.RawUI.WindowTitle = $originalTitle
 
-# This works in both PowerShell ISE and regular PowerShell
-if ($Host.Name -eq 'ConsoleHost') {
-    $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
-} else {
-    # For PowerShell ISE or other hosts
-    Write-Host "Running in $($Host.Name) - script will auto-close in 5 seconds..."
-    Start-Sleep -Seconds 5
-}
+# Call the wait function
+Wait-ForUser

@@ -24,7 +24,7 @@ if (Test-Path $hoi4Path) {
     Write-Host "  ✗ HOI4 not found in default location" -ForegroundColor Red
 }
 
-# Check 2: Dependencies (FIXED VERSION)
+# Check 2: Dependencies
 Write-Host "`n[2/5] Checking system dependencies..." -ForegroundColor Yellow
 
 function Test-DirectX {
@@ -96,7 +96,7 @@ if (Test-Path $parDocsPath) {
     Write-Host "  ℹ Paradox folder not found, will be created on first run" -ForegroundColor Gray
 }
 
-# Check 4: Windows Defender Exclusions (UPDATED FOR WINDOWS 11)
+# Check 4: Windows Defender Exclusions
 Write-Host "`n[4/5] Checking Windows Defender exclusions..." -ForegroundColor Yellow
 $defenderPaths = @(
     "HKLM:\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths",
@@ -159,10 +159,13 @@ Write-Host "- Reinstall dependencies if marked as missing" -ForegroundColor Gray
 Write-Host "- Check Windows Event Viewer for detailed errors" -ForegroundColor Gray
 Write-Host "- Note: Windows Defender exclusions are optional but recommended" -ForegroundColor Gray
 
-Write-Host "`nPress any key to exit..." -ForegroundColor Gray
-try {
-    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-} catch {
-    # If ReadKey fails (e.g., in non-interactive shell), just exit
-    Write-Host "`nScript completed." -ForegroundColor Gray
+Write-Host "`nPress any key to continue..." -ForegroundColor Gray
+
+# This works in both PowerShell ISE and regular PowerShell
+if ($Host.Name -eq 'ConsoleHost') {
+    $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
+} else {
+    # For PowerShell ISE or other hosts
+    Write-Host "Running in $($Host.Name) - script will auto-close in 5 seconds..."
+    Start-Sleep -Seconds 5
 }

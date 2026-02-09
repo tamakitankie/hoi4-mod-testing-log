@@ -167,6 +167,34 @@
             margin-left: 8px;
         }
         
+        /* ========== ADDED STATISTICS STYLES ========== */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background-color: #161b22;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+        
+        .stat-item h3 {
+            margin: 0 0 8px 0;
+            color: #58a6ff;
+            font-size: 1.2em;
+        }
+        
+        .stat-item p {
+            margin: 0;
+            color: #8b949e;
+            font-size: 0.9em;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 16px;
@@ -180,36 +208,69 @@
                 display: block;
                 overflow-x: auto;
             }
+            
+            /* Responsive stats for mobile */
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .stat-item {
+                padding: 12px;
+            }
+            
+            .stat-item h3 {
+                font-size: 1.1em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>HOI4 Mod Testing Log</h1>
-            <p class="subtitle">Documenting HOI4 1.17.3 Graphics Override Engine Bugs</p>
+            <h1>HOI4 1.17.3 Graphics Override Bug</h1>
+            <p class="subtitle">Documenting a critical engine bug affecting portrait and texture overrides</p>
         </header>
         
         <div class="status-banner">
-            ⚠️ <strong>CURRENT STATUS:</strong> HOI4 1.17.3 graphics override engine is broken. Mods load but visual changes don't apply.
+            <strong>Current Status:</strong> Bug scope refined - Color overrides work, portrait/texture overrides broken in both old and new systems.
         </div>
         
         <div class="grid">
             <div class="card">
-    <h2>📈 Test Statistics</h2>
-    <p><strong>Tests Run:</strong> 11</p>
-    <p><strong>Tests Failed:</strong> 9</p>
-    <p><strong>Tests Passed:</strong> 2</p>
-    <p><strong>Success Rate:</strong> 18%</p>
-    <p><strong>Note:</strong> Only system tests pass</p>
-</div>
+                <h2>📈 Test Statistics</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3>Tests Run: 11</h3>
+                        <p>Total test cases</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Tests Failed: 9</h3>
+                        <p>Portrait overrides broken</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Success Rate: 18%</h3>
+                        <p>Colors work, portraits fail</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Latest: 2026-02-11</h3>
+                        <p>Bug scope refined</p>
+                    </div>
+                </div>
+            </div>
             
             <div class="card">
                 <h2>🔧 System Information</h2>
                 <p><strong>OS:</strong> Windows 11 Pro (Fresh Install)</p>
                 <p><strong>HOI4 Version:</strong> 1.17.3</p>
                 <p><strong>Install Type:</strong> Steam (Fresh)</p>
-                <p><strong>Issue Type:</strong> Engine-Level Bug</p>
+                <p><strong>Issue Type:</strong> Texture/Portrait Engine Bug</p>
                 <p><strong>Status:</strong> Reported to Paradox</p>
             </div>
             
@@ -225,7 +286,7 @@
         </div>
         
         <div class="card">
-            <h2>🧪 Recent Test Results <span class="update-badge">Updated: 2026-02-10</span></h2>
+            <h2>🧪 Recent Test Results <span class="update-badge">Updated: 2026-02-11</span></h2>
             <table>
                 <thead>
                     <tr>
@@ -254,84 +315,45 @@
                     <tr>
                         <td>2026-02-09</td>
                         <td>Portrait Override</td>
-                        <td>H1tl3r → Churchill</td>
+                        <td>Portrait Change</td>
                         <td>No Change</td>
                         <td class="status-fail">❌ FAIL</td>
                     </tr>
                     <tr>
-                        <td>2026-02-09</td>
-                        <td>Cache Clear Test</td>
-                        <td>Fresh mod load</td>
-                        <td>No effect</td>
-                        <td class="status-fail">❌ FAIL</td>
-                    </tr>
-                    <tr>
                         <td>2026-02-10</td>
-                        <td>Color Override Test</td>
-                        <td>Germany should be red</td>
-                        <td>Germany remains black</td>
-                        <td class="status-fail">❌ FAIL</td>
-                    </tr>
-                    <tr>
-                        <td>2026-02-10</td>
-                        <td>Portrait Override (Old System)</td>
-                        <td>Hitler replaced with Churchill</td>
-                        <td>No change, original portrait</td>
-                        <td class="status-fail">❌ FAIL</td>
-                    </tr>
-                    <tr>
-                        <td>2026-02-10</td>
-                        <td>Portrait Override (New System)</td>
-                        <td>New 1.17.3 portrait system</td>
-                        <td>Portrait changes ignored</td>
-                        <td class="status-fail">❌ FAIL</td>
-                    </tr>
-                    <tr>
-                        <td>2026-02-10</td>
-                        <td>DirectX Dependency Verification</td>
-                        <td>All graphics dependencies installed</td>
-                        <td>System ready, bug persists</td>
+                        <td>System Fresh Install</td>
+                        <td>Clean Windows 11</td>
+                        <td>Fresh HOI4 1.17.3</td>
                         <td class="status-pass">✅ PASS</td>
                     </tr>
                     <tr>
                         <td>2026-02-10</td>
-                        <td>File Encoding Validation</td>
-                        <td>UTF-8 without BOM, Unix LF</td>
-                        <td>Files correctly encoded</td>
+                        <td>Color Override</td>
+                        <td>Germany = Red</td>
+                        <td>Germany = Red</td>
                         <td class="status-pass">✅ PASS</td>
                     </tr>
                     <tr>
                         <td>2026-02-10</td>
-                        <td>Vanilla File Direct Edit</td>
-                        <td>Direct edit should work</td>
-                        <td>Changes completely ignored</td>
+                        <td>Portrait (New System)</td>
+                        <td>Custom DDS portrait</td>
+                        <td>Vanilla portrait</td>
+                        <td class="status-fail">❌ FAIL</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-10</td>
+                        <td>Portrait (Old System)</td>
+                        <td>Custom DDS portrait</td>
+                        <td>Vanilla portrait</td>
                         <td class="status-fail">❌ FAIL</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         
-        <div class="card">
-            <h2>📁 Test Files & Evidence</h2>
-            <p>Complete documentation of all tests, logs, and evidence:</p>
-            <a href="https://github.com/tamakitankie/hoi4-mod-testing-log/tree/main/test-mods" class="btn" target="_blank">View Test Mods</a>
-            <a href="https://github.com/tamakitankie/hoi4-mod-testing-log/tree/main/game-logs" class="btn btn-secondary" target="_blank">Game Logs</a>
-            <a href="https://github.com/tamakitankie/hoi4-mod-testing-log/tree/main/screenshots" class="btn btn-secondary" target="_blank">Screenshots</a>
-            <a href="https://github.com/tamakitankie/hoi4-mod-testing-log/tree/main/evidence" class="btn btn-secondary" target="_blank">System Info</a>
-        </div>
-        
-        <div class="card">
-            <h2>🔗 Resources & Links</h2>
-            <a href="https://forum.paradoxplaza.com/forum/forums/hearts-of-iron-iv-bug-reports.951/" class="btn" target="_blank">Paradox Bug Reports</a>
-            <a href="https://hoi4.paradoxwikis.com/Modding" class="btn btn-secondary" target="_blank">HOI4 Modding Wiki</a>
-            <a href="https://github.com/tamakitankie/hoi4-mod-testing-log" class="btn btn-secondary" target="_blank">GitHub Repository</a>
-            <a href="https://github.com/tamakitankie" class="btn btn-secondary" target="_blank">My GitHub Profile</a>
-        </div>
-        
         <footer>
-            <p>HOI4 Mod Testing Log • Created with GitHub Pages • Updated: February 10, 2026</p>
-            <p>This is a documentation project for tracking HOI4 1.17.3 graphics engine bugs.</p>
-            <p>Repository: <a href="https://github.com/tamakitankie/hoi4-mod-testing-log" style="color: #58a6ff;">github.com/tamakitankie/hoi4-mod-testing-log</a></p>
+            <p>HOI4 1.17.3 Graphics Override Bug Documentation • Last updated: 2026-02-11</p>
+            <p>This repository documents a critical engine bug affecting all HOI4 modding in version 1.17.3</p>
         </footer>
     </div>
 </body>

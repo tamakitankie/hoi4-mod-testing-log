@@ -116,8 +116,8 @@ This bug affects **all portrait and texture overrides** while sparing color over
 
 ## 🔗 Links
 - Paradox Bug Report: [Forum link](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)
-- Game Logs: Documents/Paradox Interactive/Hearts of Iron IV/logs/
-- Testing Dashboard: [Setup in Progress - View `index.html`]
+- Game Logs: Documents/Paradox Interactive/Hearts of Iron IV/logs/ [See logs/README.md]
+- Testing Dashboard: [Website](https://tamakitankie.github.io/hoi4-mod-testing-log/)
 - Full Evidence: [GitHub Repository](https://github.com/tamakitankie/hoi4-mod-testing-log)
 
 ---

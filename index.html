@@ -191,7 +191,7 @@
         </header>
         
         <div class="status-banner">
-            🚨 <strong>CURRENT STATUS:</strong> HOI4 1.17.3 graphics override engine is broken. Mods load but visual changes don't apply.
+            ⚠️ <strong>CURRENT STATUS:</strong> HOI4 1.17.3 graphics override engine is broken. Mods load but visual changes don't apply.
         </div>
         
         <div class="grid">
@@ -267,9 +267,44 @@
                     </tr>
                     <tr>
                         <td>2026-02-10</td>
-                        <td>New Test</td>
-                        <td>Expected Result</td>
-                        <td>Actual Result</td>
+                        <td>Color Override Test</td>
+                        <td>Germany should be red</td>
+                        <td>Germany remains black</td>
+                        <td class="status-fail">❌ FAIL</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-10</td>
+                        <td>Portrait Override (Old System)</td>
+                        <td>Hitler replaced with Churchill</td>
+                        <td>No change, original portrait</td>
+                        <td class="status-fail">❌ FAIL</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-10</td>
+                        <td>Portrait Override (New System)</td>
+                        <td>New 1.17.3 portrait system</td>
+                        <td>Portrait changes ignored</td>
+                        <td class="status-fail">❌ FAIL</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-10</td>
+                        <td>DirectX Dependency Verification</td>
+                        <td>All graphics dependencies installed</td>
+                        <td>System ready, bug persists</td>
+                        <td class="status-pass">✅ PASS</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-10</td>
+                        <td>File Encoding Validation</td>
+                        <td>UTF-8 without BOM, Unix LF</td>
+                        <td>Files correctly encoded</td>
+                        <td class="status-pass">✅ PASS</td>
+                    </tr>
+                    <tr>
+                        <td>2026-02-10</td>
+                        <td>Vanilla File Direct Edit</td>
+                        <td>Direct edit should work</td>
+                        <td>Changes completely ignored</td>
                         <td class="status-fail">❌ FAIL</td>
                     </tr>
                 </tbody>

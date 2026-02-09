@@ -54,7 +54,7 @@ HOI4 1.17.3 loads mods but **completely ignores visual overrides**. The game:
 This is a **HOI4 engine-level bug**, not user error. The graphics override pipeline appears to be broken in version 1.17.3. No user-side fix has been discovered despite exhaustive testing.
 
 ## 🔗 Links
-- **Paradox Bug Report**: [Forum Post Link](https://forum.paradoxplaza.com/forum/threads/hoi4-1-17-3-graphics-override-engine-bug.1234567/)
+- **Paradox Bug Report**: [Forum Post Link](https://forum.paradoxplaza.com/forum/threads/color-portrait-overrides-fail-to-apply-despite-correct-mod-loading.1900441/#post-31104797)
 - **Live Testing Dashboard**: `https://github.com/tamakitankie/hoi4-mod-testing-log`
 - **Game Logs Location**: `Documents\Paradox Interactive\Hearts of Iron IV\logs`
 - **Launcher Logs**: `AppData/Local/Paradox Interactive/launcher-v2/logs/`

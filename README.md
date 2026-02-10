@@ -1,19 +1,34 @@
-***UPDATE & CORRECTION**
+# 🏁 ARCHIVED: Learning Case Study
 
-**After further investigation, I discovered the issue was related to my implementation rather than a game bug. 
-The learning process involved understanding HOI4's updated portrait system in 1.17.3.
-My apologies for the incorrect bug report - this was a valuable learning experience in modding and systems diagnosis.**
+**Status:** Repository archived - Issue was implementation error, not game bug
 
-**Key Learning:**
-_- Successfully implemented working portrait overrides
-- Understood 1.17.3's new portrait system requirements
-- Developed useful diagnostic tools in the process_
+## Summary
+This repository documents a 72-hour diagnostic journey that ultimately revealed:
+- ✅ HOI4 1.17.3 portrait system works correctly
+- ✅ The "bug" was my misunderstanding of implementation requirements
+- ✅ Successfully created working portrait overrides after learning the system
+- ✅ Valuable learning experience in systematic troubleshooting
 
-Thank you for your understanding.
+## What Happened
+1. **Initial assumption:** Game bug in 1.17.3
+2. **Diagnostic process:** 72 hours of systematic testing
+3. **Discovery:** Implementation error on my part
+4. **Outcome:** Learned HOI4's portrait system and created working mod
 
+## Lessons Learned
+- Importance of understanding system requirements before assuming bugs
+- Value of methodical testing and documentation
+- HOI4 1.17.3 portrait system implementation details
+- How to create effective diagnostic tools
 
-# FOR ARCHIVE AND DOCUMENTATION
+## Repository Contents
+Preserved as a case study in:
+- Systematic problem-solving
+- Bug report methodology
+- Learning through failure
+- Technical documentation
 
+*Archived on: 10/02/2026*
 # HOI4 Mod Testing Log
 **Tracking HOI4 1.17.3 Graphics Override Engine Bugs**
 

@@ -1,5 +1,20 @@
-# HOI4 Mod Testing Log
+***UPDATE & CORRECTION**
 
+**After further investigation, I discovered the issue was related to my implementation rather than a game bug. 
+The learning process involved understanding HOI4's updated portrait system in 1.17.3.
+My apologies for the incorrect bug report - this was a valuable learning experience in modding and systems diagnosis.**
+
+**Key Learning:**
+_- Successfully implemented working portrait overrides
+- Understood 1.17.3's new portrait system requirements
+- Developed useful diagnostic tools in the process_
+
+Thank you for your understanding.
+
+
+# FOR ARCHIVE AND DOCUMENTATION
+
+# HOI4 Mod Testing Log
 **Tracking HOI4 1.17.3 Graphics Override Engine Bugs**
 
 ## 🐛 Current Status
